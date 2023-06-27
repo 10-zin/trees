@@ -1,5 +1,6 @@
 from typing import List
 from tree import Node
+from utils import draw_binary_tree
 
 def insert_node_in_bst(root: Node, new_node: Node):
     """
@@ -17,7 +18,6 @@ def insert_node_in_bst(root: Node, new_node: Node):
             root.right = new_node
         else:
             insert_node_in_bst(root.right, new_node)
-    return
     
 def create_bst(values: List[float]):
     """
@@ -48,11 +48,14 @@ def create_bst_from_array():
     Just init a list of randomly arranged numbers.
     The following code creates a bst for it in O(n).
     And then prints the bst in increasing order again in O(n).
+    Also visualizes the bst. (Note, if you see a straight arrow in diag, it means that's the right child.)
     """
 
     values = [30.0, 1.0, 12.0, 19.0, 32.0, 8.0, 31.0, 34.0]
     root = create_bst(values)
     show_bst_inorder(root)
+    draw_binary_tree(root, "visuals/bst")
+
 
 if __name__=='__main__':
     create_bst_from_array()
