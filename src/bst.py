@@ -7,7 +7,7 @@ def insert_node_in_bst(root: Node, new_node: Node):
     and find the best place to fit in the `new_node`.
     """
 
-    if new_node.val<root.val:
+    if new_node.value<root.value:
         if root.left is None:
             root.left = new_node
         else:
@@ -40,7 +40,7 @@ def show_bst_inorder(root: Node):
     if root is None:
         return
     show_bst_inorder(root.left)
-    print(root.val)
+    print(root.value)
     show_bst_inorder(root.right)
 
 def create_bst_from_array():

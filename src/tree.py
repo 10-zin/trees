@@ -5,7 +5,10 @@ class Node:
     This is just for binary tees.
     """
 
-    def __init__(self, val: float):
-        self.val = val
+    def __init__(self, value: float):
+        self.value = value
         self.left: Node = None
         self.right: Node = None
+
+    def __repr__(self,):
+        return f"Node({self.value}, left={self.left}, right={self.right})"
