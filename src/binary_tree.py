@@ -39,7 +39,7 @@ def create_balanced_tree_from_array():
     """
     values = [30.0, 1.0, 12.0, 19.0, 32.0, 8.0, 31.0, 34.0]
     root = create_from_bfs(values)
-    draw_binary_tree(root, img_path="trees/visuals/binary_tree")
+    draw_binary_tree(root, img_path="visuals/binary_tree")
 
 
 if __name__=='__main__':
