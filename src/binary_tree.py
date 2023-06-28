@@ -32,15 +32,18 @@ def create_from_bfs(values: List[float]):
 
     return root
 
-def create_balanced_tree_from_array():
+def create_balanced_tree_from_array(values: List[float], draw_tree=False) -> Node:
     """
     Creates a simple balanced binary tree from an array.
     Then, displays the constructed tree in a png image, via graphviz library
     """
     values = [30.0, 1.0, 12.0, 19.0, 32.0, 8.0, 31.0, 34.0]
     root = create_from_bfs(values)
-    draw_binary_tree(root, img_path="visuals/binary_tree")
+    if draw_tree:
+        draw_binary_tree(root, img_path="visuals/binary_tree")
+    return root
 
 
-if __name__=='__main__':
-    create_balanced_tree_from_array()
+# if __name__=='__main__':
+#     values = [30.0, 1.0, 12.0, 19.0, 32.0, 8.0, 31.0, 34.0]
+#     create_balanced_tree_from_array(values, draw_tree=True)
